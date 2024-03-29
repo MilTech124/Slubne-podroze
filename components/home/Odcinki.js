@@ -4,17 +4,20 @@ import { useEffect, useState } from "react";
 import { Fade } from "react-awesome-reveal";
 const axios = require("axios");
 
-const getOdcinki = async () => {
-  const response = await axios.get(process.env.NEXT_PUBLIC_ODCINKI);
-  return response.data;
-};
+
 
 function Odcinki() {
   const [Number, setNumber] = useState([4]);
   const [odcinki, setOdcinki] = useState([]);
+
   const getMore = () => {
     setNumber(Number + 4);
     window.location.href = "#odcinki";
+  };
+
+  const getOdcinki = async () => {
+    const response = await axios.get(process.env.NEXT_PUBLIC_ODCINKI);
+    return response.data;
   };
 
   useEffect(() => {
