@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 h2 {
-  @apply text-4xl py-5 font-semibold text-center text-gray-900;
+  @apply text-4xl md:text-4xl py-5 font-semibold text-center text-gray-900;
 }
 h3{
   @apply text-base py-5 font-semibold text-center text-gray-600;
@@ -25,7 +25,7 @@ nav ul li {
 }
 
 nav ul li :hover {
-  color:beige;  
+  color: #DB155A;  
 }
 
 body {

@@ -1,18 +1,18 @@
 
 function Odcinek({ odcinek }) {
   return (
-    <div className="flex gap-10 max-w-4xl">
-      <a href={odcinek.link}>
+    <div className="flex max-sm:flex-wrap items-center justify-center md:items-stretch md:gap-10 max-w-4xl">
+      <a href={odcinek.acf.link}>
         <img
-          src={odcinek.image}
-          className="min-w-[350px] h-[200px] overflow-hidden translate-x-2 hover:translate-x-0 transition-transform duration-500 ease-in-out"
+          src={odcinek.acf.obraz}
+          className="min-w-[350px] h-[200px] overflow-hidden md:translate-x-2 hover:translate-x-0 transition-transform duration-500 ease-in-out"
           alt={odcinek.title}
         />
       </a>
-      <div className="flex flex-col items-start justify-between">
+      <div className="flex flex-col items-start max-sm:px-5 justify-between">
         <h3 className="text-xl font-semibold">{odcinek.title}</h3>
 
-        <p className="text-sm">{odcinek.description.slice(0, 200) + " ..."}</p>
+        <p className="text-sm">{odcinek.acf.text.slice(0, 200) + " ..."}</p>
         <a
           href={odcinek.link}
           className="text-xs text-neutral-500 hover:text-neutral-900 hover:font-medium"

@@ -1,31 +1,43 @@
+import Newsletter from "../Newsleter";
+
 const Footer = () => {
   const socials = [
     {
       name: "Youtube",
       icon: "/Youtube_logo.png",
-      link: "#",
+      link: "https://www.youtube.com/@slubnepodroze",
     },
     {
       name: "Facebook",
       icon: "/Facebook.png",
-      link: "#",
+      link: "https://www.facebook.com/slubnepodroze",
     },
     {
       name: "Tictok",
       icon: "/tic-toc.png",
-      link: "#",
+      link: "https://www.tiktok.com/@slubne.podroze",
     },
     {
       name: "Instagram",
       icon: "/insta.png",
-      link: "#"
+      link: "https://www.instagram.com/slubne_podroze"
     },
+    {
+      name: "Twitter",
+      icon: "/x.png",
+      link: "https://twitter.com/SlubnePodroze"
+    },
+    {
+      name: "Pinterest",
+      icon: "/pin.png",
+      link: "https://pin.it/2ZQfklCko"
+    }
   ];
 
   return (
     <>
-      <footer className=" bg-neutral-100 w-full">
-        <div className="container md:px-10 mx-auto flex justify-between ">
+      <footer id="footer" className="bg-neutral-100 w-full">
+        <div className="container md:px-10 py-10 mx-auto flex max-sm:flex-wrap max-sm:justify-center justify-between ">
           <div className="flex flex-col gap-5 justify-center items-center max-w-[350px]">
             <img src="/logo.webp" width={200} alt="logo" />
             <p className="text-sm text-neutral-900">
@@ -37,6 +49,7 @@ const Footer = () => {
             <div className="flex w-full items-center justify-evenly">
               {socials.map((social) => (
                 <a
+                  key={social.name}
                   href={social.link}
                   target="_blank"
                   className="hover:scale-110 transition-transform duration-300 ease-in-out"
@@ -55,18 +68,10 @@ const Footer = () => {
             <p className="text-neutral-500 pb-5">
               Zapisz się do naszego newsletera
             </p>
-            <form className="flex gap-3">
-              <input
-                type="email"
-                placeholder="Email"
-                className="p-2 border border-neutral-300"
-              />
-              <button className="bg-primary-500 neutral-300 text-p-2 p-2 border border-neutral-300">
-                Subskrybuj
-              </button>
-            </form>
+          
+            <Newsletter />
           </div>
-          <div>
+          <div className="hidden">
             <h3 className="text-2xl text-left pb-0 font-medium text-neutral-500">
               Przydatne linki
             </h3>

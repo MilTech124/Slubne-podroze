@@ -9,9 +9,9 @@ function Hero() {
   const title = "Witaj na stronie Ślubne Podróże! ";
   const description =
     "Na naszej stronie znajdziesz fascynujące wywiady z osobami, które tworzą magiczne chwile podczas ślubów. Mistrzowie florystyki, dekoracji, fotografii, muzyki oraz wiele innych specjalistów podzielą się swoimi doświadczeniami i sekretami sukcesu. Dowiecie się, jak wybrać idealny bukiet, stworzyć niepowtarzalną oprawę muzyczną, czy też zaplanować niesamowite atrakcje weselne.";
-  const link = "https://www.youtube.com/";
+  const link = "https://www.youtube.com/@slubnepodroze";
   return (
-    <section id="hero" className="relative h-[800px]">
+    <section id="hero" className="relative md:h-[800px] h-[400px]">
       <Image
         src={"/baner.jpg"}
         width={1920}
@@ -28,7 +28,7 @@ function Hero() {
           wrapper="h1"
           cursor={false}
           repeat={0}
-          className="text-6xl font-bold"
+          className="md:text-6xl font-bold"
         />
         <TypeAnimation
           sequence={[
@@ -39,7 +39,7 @@ function Hero() {
           cursor={false}
           repeat={0}
           speed={75}
-          className="max-w-[80vw] h-[100px] "
+          className="max-w-[80vw] h-[100px] max-sm:text-xs "
         />
 
         {/* <h1 className='text-6xl font-bold'>{title}</h1>

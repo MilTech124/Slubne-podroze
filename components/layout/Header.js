@@ -9,17 +9,17 @@ const Header = () => {
     };
 
     return (
-        <header className=' absolute w-full  top-0 left-0 z-10'>
+        <header className=' absolute w-full  top-0 left-0 z-10' style={isMobileNavOpen ? {background:"#1D2327",height:600} :null} >
             <nav className="relative flex items-center text-white p-4 mx-auto container">
                 {/* Desktop Navigation */}
-                <div className='pr-10 hover:scale-105 transition-transform '>
-                    <a href="#"><img src="/logo.webp" width={150} /></a>
+                <div className='pr-10 hover:scale-105 transition-transform'>
+                    <a href="/"><img src="/logo.webp" width={150} /></a>
                 </div>
                 <ul className="hidden md:flex gap-5 space-x-4">
-                    <li><a href="#">O nas</a></li>
-                    <li><a href="#">Aktualnosci</a></li>
-                    <li><a href="#">Odcinki</a></li>
-                    <li><a href="#">Kontakt</a></li>
+                    
+                    <li><a href="/#aktualnosci">Aktualnosci</a></li>
+                    <li><a href="/#odcinki">Odcinki</a></li>
+                    <li><a href="/#footer">Kontakt</a></li>
                 </ul>
 
                 {/* Mobile Navigation */}
@@ -29,11 +29,11 @@ const Header = () => {
                     </svg>
                 </button>
                 {isMobileNavOpen && (
-                    <ul className="md:hidden space-x-4">
-                    <li><a href="#">O nas</a></li>
-                    <li><a href="#">Aktualnosci</a></li>
-                    <li><a href="#">Odcinki</a></li>
-                    <li><a href="#">Kontakt</a></li>
+                    <ul className="md:hidden absolute text-center top-[200px] left-1/2 -translate-x-1/2">
+                    
+                    <li className='text-xl pb-2'><a href="/#aktualnosci">Aktualnosci</a></li>
+                    <li className='text-xl pb-2'><a href="/#odcinki">Odcinki</a></li>
+                    <li className='text-xl pb-2'><a href="/#footer">Kontakt</a></li>
                     </ul>
                 )}
             </nav>
