@@ -1,10 +1,12 @@
-
+import Image from "next/image";
 function Odcinek({ odcinek }) {
   return (
     <div className="flex max-sm:flex-wrap items-center justify-center md:items-stretch md:gap-10 max-w-4xl">
       <a href={odcinek.acf.link}>
-        <img
+        <Image
           src={odcinek.acf.obraz}
+          width={350}
+          height={200}
           className="min-w-[350px] h-[200px] overflow-hidden md:translate-x-2 hover:translate-x-0 transition-transform duration-500 ease-in-out"
           alt={odcinek.title}
         />
