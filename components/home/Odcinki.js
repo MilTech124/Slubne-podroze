@@ -23,7 +23,7 @@ function Odcinki() {
   useEffect(() => {
     getOdcinki().then((data) => {
       setOdcinki(data);
-      // console.log(data);
+      
     });
   }, []);
 
@@ -34,7 +34,7 @@ function Odcinki() {
     >
       <h2 className="max-sm:text-xl">Odcinki</h2>
       <div className="justify-center items-center flex flex-col-reverse gap-10">
-        {odcinki.length === 0 && <p>Ładowanie...</p>}
+        {/* {odcinki.length === 0 && <p>Ładowanie...</p>} */}
 
         {odcinki &&
           odcinki.slice(0, Number).map((odcinek) => (
