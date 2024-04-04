@@ -10,7 +10,7 @@ const Newsletter = () => {
       return alert("Email is required");
     }
     try{
-        const response = await fetch("/resend", {
+        const response = await fetch("/api/resend", {
             method: "POST",
             headers: {
             "Content-Type": "application/json",

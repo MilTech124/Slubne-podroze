@@ -16,7 +16,7 @@ function Odcinki() {
   };
 
   const getOdcinki = async () => {
-    const response = await axios.get(process.env.NEXT_PUBLIC_ODCINKI);
+    const response = await axios.get(process.env.NEXT_PUBLIC_ODCINKI,{revalidate: 60});
     return response.data;
   };
 
