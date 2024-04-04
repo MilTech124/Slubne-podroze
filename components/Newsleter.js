@@ -5,28 +5,28 @@ const Newsletter = () => {
   const [email, setEmail] = useState("");
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault();    
     if (!email) {
       return alert("Email is required");
     }
-    // try{
-    //     const response = await fetch("/newsletter", {
-    //         method: "POST",
-    //         headers: {
-    //         "Content-Type": "application/json",
-    //         },
-    //         body: JSON.stringify({ email }),
-    //     });
-    //     const data = await response.json();
-    //     console.log(data);
-    //     if (data){
-    //         alert("Dziękuję za subskrypcję!")
-    //         setEmail("");
-    //     }
-    // }
-    // catch(e){
-    //     console.log(e);
-    // }
+    try{
+        const response = await fetch("/resend", {
+            method: "POST",
+            headers: {
+            "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ email }),
+        });
+        const data = await response.json();
+        console.log("Data",data);
+        if (data){
+            alert("Dziękuję za subskrypcję!")
+            setEmail("");
+        }
+    }
+    catch(e){
+        console.log(e);
+    }
       alert("Dziękuję za subskrypcję!")
    
   };
@@ -35,6 +35,7 @@ const Newsletter = () => {
     <form onSubmit={handleSubmit} className="z-0 flex gap-2 items-center justify-center">
       <input
         type="email"
+        name="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="Twój email"

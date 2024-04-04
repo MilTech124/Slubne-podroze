@@ -57,7 +57,7 @@ async function Aktualnosci(){
   async function getAktualnosci() {
 
     const response = await axios.get(process.env.NEXT_PUBLIC_AKTUALNOSCI);
-    console.log("aktualnosci",response.data);
+    // console.log("aktualnosci",response.data);
     return response.data;
   }
 

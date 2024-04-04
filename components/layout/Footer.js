@@ -20,19 +20,33 @@ const Footer = () => {
     {
       name: "Instagram",
       icon: "/insta.png",
-      link: "https://www.instagram.com/slubne_podroze"
+      link: "https://www.instagram.com/slubne_podroze",
     },
     {
       name: "Twitter",
       icon: "/x.png",
-      link: "https://twitter.com/SlubnePodroze"
+      link: "https://twitter.com/SlubnePodroze",
     },
     {
       name: "Pinterest",
       icon: "/pin.png",
-      link: "https://pin.it/2ZQfklCko"
-    }
+      link: "https://pin.it/2ZQfklCko",
+    },
   ];
+
+  const sendEmail = () => {
+    fetch("/api/sendEmail", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => console.log(data))
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  };
 
   return (
     <>
@@ -68,7 +82,7 @@ const Footer = () => {
             <p className="text-neutral-500 pb-5">
               Zapisz się do naszego newsletera
             </p>
-          
+
             <Newsletter />
           </div>
           <div className="hidden">

@@ -10,12 +10,12 @@ function Odcinek({ odcinek }) {
         />
       </a>
       <div className="flex flex-col items-start max-sm:px-5 justify-between">
-        <h3 className="text-xl font-semibold">{odcinek.title}</h3>
+        <h3 className="text-xl font-semibold">{odcinek.acf.tytul}</h3>
 
         <p className="text-sm">{odcinek.acf.text.slice(0, 200) + " ..."}</p>
         <a
           href={odcinek.link}
-          className="text-xs text-neutral-500 hover:text-neutral-900 hover:font-medium"
+          className="text-xs text-neutral-500 transition-all hover:text-neutral-900 hover:font-medium"
         >
           {odcinek.link}
         </a>

@@ -23,7 +23,7 @@ function Odcinki() {
   useEffect(() => {
     getOdcinki().then((data) => {
       setOdcinki(data);
-      console.log(data);
+      // console.log(data);
     });
   }, []);
 

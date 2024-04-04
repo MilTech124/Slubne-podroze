@@ -16,6 +16,7 @@
     "react-awesome-reveal": "^4.2.8",
     "react-dom": "^18",
     "react-type-animation": "^3.2.0",
+    "resend": "^3.2.0",
     "swiper": "^11.0.7"
   },
   "devDependencies": {
