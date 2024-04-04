@@ -2,30 +2,38 @@
 import Odcinek from "./Odcinek";
 import { useEffect, useState } from "react";
 import { Fade } from "react-awesome-reveal";
+import { getOdcinki } from "@/app/actions";
 const axios = require("axios");
 
-
+// async function getOdcinki() {
+//     const response = await axios.get(process.env.NEXT_PUBLIC_ODCINKI,{revalidate: 60});
+//     return response.data;
+//   };
 
 function Odcinki() {
   const [Number, setNumber] = useState([4]);
   const [odcinki, setOdcinki] = useState([]);
+
+  getOdcinki().then((data) => {
+    setOdcinki(data);
+  });
 
   const getMore = () => {
     setNumber(Number + 4);
     window.location.href = "#odcinki";
   };
 
-  const getOdcinki = async () => {
-    const response = await axios.get(process.env.NEXT_PUBLIC_ODCINKI,{revalidate: 60});
-    return response.data;
-  };
+  // const getOdcinki = async () => {
+  //   const response = await axios.get(process.env.NEXT_PUBLIC_ODCINKI,{revalidate: 60});
+  //   return response.data;
+  // };
 
-  useEffect(() => {
-    getOdcinki().then((data) => {
-      setOdcinki(data);
+  // useEffect(() => {
+  //   getOdcinki().then((data) => {
+  //     setOdcinki(data);
       
-    });
-  }, []);
+  //   });
+  // }, []);
 
   return (
     <div

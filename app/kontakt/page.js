@@ -4,8 +4,7 @@ function page() {
   return (
     <div>
       <h1>Kontakt</h1>
-      <p>Skontaktuj się z nami</p>
-      
+      <p>Skontaktuj się z nami</p>      
     </div>
   )
 }
