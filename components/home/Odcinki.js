@@ -14,9 +14,7 @@ function Odcinki() {
   const [Number, setNumber] = useState([4]);
   const [odcinki, setOdcinki] = useState([]);
 
-  getOdcinki().then((data) => {
-    setOdcinki(data);
-  });
+  
 
   const getMore = () => {
     setNumber(Number + 4);
@@ -28,12 +26,12 @@ function Odcinki() {
   //   return response.data;
   // };
 
-  // useEffect(() => {
-  //   getOdcinki().then((data) => {
-  //     setOdcinki(data);
+  useEffect(() => {
+    getOdcinki().then((data) => {
+      setOdcinki(data);
       
-  //   });
-  // }, []);
+    });
+  }, []);
 
   return (
     <div
