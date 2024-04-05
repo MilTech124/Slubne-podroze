@@ -12,12 +12,16 @@ function Hero() {
   const link = "https://www.youtube.com/@slubnepodroze";
   return (
     <section id="hero" className="relative md:h-[800px] h-[400px]">
-      <Image
-        src={"/baner.jpg"}
-        width={1920}
-        height={1080}
-        className="absolute baner object-cover object-top h-full w-full top-0 left-0"
-      />
+      <iframe
+        width="1920"
+        height="1080"
+        src="https://www.youtube.com/embed/vIUZ3dGLO4I?autoplay=1&mute=1"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        className="absolute object-cover object-top h-full w-full top-0 left-0"
+      ></iframe>
       <div className="absolute h-full w-full bg-black bg-opacity-50 top-0 left-0"></div>
       <div className="absolute bottom-10 left-10 transform text-white">
         <TypeAnimation

@@ -1,5 +1,6 @@
 "use client"
 import React, { useState } from 'react';
+import Link from 'next/link';
 
 const Header = () => {
     const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
@@ -13,13 +14,13 @@ const Header = () => {
             <nav className="relative flex items-center text-white p-4 mx-auto container">
                 {/* Desktop Navigation */}
                 <div className='pr-10 hover:scale-105 transition-transform'>
-                    <a href="/"><img src="/logo.webp" width={150} /></a>
+                    <Link href="/"><img src="/logo.webp" width={150} /></Link>
                 </div>
                 <ul className="hidden md:flex gap-5 space-x-4">
                     
-                    <li><a href="/#aktualnosci">Aktualnosci</a></li>
-                    <li><a href="/#odcinki">Odcinki</a></li>
-                    <li><a href="/#footer">Kontakt</a></li>
+                    <li><Link href="/#aktualnosci">Aktualnosci</Link></li>
+                    <li><Link href="/#odcinki">Odcinki</Link></li>
+                    <li><Link href="/kontakt">Kontakt</Link></li>
                 </ul>
 
                 {/* Mobile Navigation */}
@@ -31,9 +32,9 @@ const Header = () => {
                 {isMobileNavOpen && (
                     <ul className="md:hidden absolute text-center top-[200px] left-1/2 -translate-x-1/2">
                     
-                    <li className='text-xl pb-2'><a href="/#aktualnosci">Aktualnosci</a></li>
-                    <li className='text-xl pb-2'><a href="/#odcinki">Odcinki</a></li>
-                    <li className='text-xl pb-2'><a href="/#footer">Kontakt</a></li>
+                    <li className='text-xl pb-2'><Link href="/#aktualnosci">Aktualnosci</Link></li>
+                    <li className='text-xl pb-2'><Link href="/#odcinki">Odcinki</Link></li>
+                    <li className='text-xl pb-2'><Link href="/kontakt">Kontakt</Link></li>
                     </ul>
                 )}
             </nav>

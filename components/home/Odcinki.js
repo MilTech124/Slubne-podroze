@@ -39,6 +39,7 @@ function Odcinki() {
       id="odcinki"
     >
       <h2 className="max-sm:text-xl">Odcinki</h2>
+      <p className="text-xl pb-5 text-center">Przygotowaliśmy dla Ciebie bogatą serię odcinków, które pomogą Ci w każdym aspekcie organizacji wesela. Bez względu na to, czy dopiero zaczynasz planować swoje wymarzone wesele, czy też szukasz pomysłów na dodatkowe akcenty, tutaj znajdziesz wszystko, czego potrzebujesz.</p>
       <div className="justify-center items-center flex flex-col-reverse gap-10">
         {odcinki.length === 0 && <p>Ładowanie...</p>}
 

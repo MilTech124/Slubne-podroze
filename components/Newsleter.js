@@ -10,7 +10,7 @@ const Newsletter = () => {
       return alert("Email is required");
     }
     try{
-        const response = await fetch("/api/resend", {
+        const response = await fetch("/api/newsletter", {
             method: "POST",
             headers: {
             "Content-Type": "application/json",
@@ -40,9 +40,9 @@ const Newsletter = () => {
         onChange={(e) => setEmail(e.target.value)}
         placeholder="Twój email"
         required
-        className="w-[250px] border border-natural-200 px-7 py-4 text-black "
+        className="w-[300px] border border-natural-200 px-7 py-4 text-black "
       />
-      <button className=" border border-natural-200 px-7 py-4 ">Subskrybuj</button>
+      <button className=" border border-natural-200 px-7 py-4 hover:bg-white/50 ">Subskrybuj</button>
     </form>
   );
 };

@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "../home/Slider";
 import axios from "axios";
 
-async function Aktualnosci(){
+async function Aktualnosci() {
   // const aktualnosci = [
   //   {
   //     id: 1,
@@ -55,7 +55,6 @@ async function Aktualnosci(){
   // ];
 
   async function getAktualnosci() {
-
     const response = await axios.get(process.env.NEXT_PUBLIC_AKTUALNOSCI);
     // console.log("aktualnosci",response.data);
     return response.data;
@@ -63,18 +62,20 @@ async function Aktualnosci(){
 
   const aktualnosci = await getAktualnosci();
 
-
-
-
-
   return (
     <section id="aktualnosci">
       <div className="flex flex-col md:py-10 py-2  items-center justify-center mx-auto">
         <h2 className="max-sm:text-xl">Aktualnosci</h2>
+        <p className="container text-xl text-center pb-5">
+          Zapraszamy do zagłębiania się w świat Ślubnych Podróży i odkrywania
+          niezliczonych możliwości, jakie stwarza organizacja wyjątkowego ślubu
+          i przyjęcia weselnego. Niech każda chwila tego magicznego dnia będzie
+          niezapomniana!
+        </p>
         <Slider aktualnosci={aktualnosci} />
       </div>
     </section>
   );
-};
+}
 
 export default Aktualnosci;

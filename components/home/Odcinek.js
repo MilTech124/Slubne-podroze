@@ -16,10 +16,11 @@ function Odcinek({ odcinek }) {
 
         <p className="text-sm">{odcinek.acf.text.slice(0, 200) + " ..."}</p>
         <a
-          href={odcinek.link}
+          href={odcinek.acf.link} 
+          target="_blank"
           className="text-xs text-neutral-500 transition-all hover:text-neutral-900 hover:font-medium"
         >
-          {odcinek.link}
+          {odcinek.acf.link}
         </a>
       </div>
     </div>
